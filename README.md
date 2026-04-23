@@ -28,6 +28,7 @@ Returns API metadata and available resources.
   },
   "version": "v1"
 }
+```
 
 
 ##  Room Management
@@ -100,7 +101,7 @@ Add a new reading.
   "timestamp": 1710000000,
   "value": 25.5
 }
-
+```
 ## Technologies Used
 
 * Java (JAX-RS)
