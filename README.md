@@ -118,7 +118,7 @@ Add a new reading.
 3. Run project on Tomcat
 4. Access:
 http://localhost:8080/SmartCampus/api/v1
-
+---
 1.	Default Lifecycle of a JAX-RS Resource Class
 
 JAX-RS resource classes operate under a per-request lifecycle by default. This means that every incoming HTTP request results in the instantiation of a new resource object. This instance handles the request and is then discarded. This design ensures isolation between requests and eliminates shared mutable state unless explicitly introduced. This lifecycle simplifies concurrency handling because each thread works on its own instance. However, it introduces challenges for maintaining state. Any in-memory data structures such as lists or maps defined as instance variables will not persist across requests. Therefore, developers must use static variables, singleton service layers, or persistent storage such as databases. When shared memory is used, concurrency issues must be addressed. Non-thread-safe collections like HashMap can result in race conditions and data corruption. Thread-safe alternatives like ConcurrentHashMap or synchronized blocks must be used. This architectural choice forces developers to consciously manage shared state and prevents accidental data inconsistencies in multi-threaded environments.
